@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import { Settings } from "./pages/Settings";
 import { Mods } from "./pages/Mods";
 import { Servers } from "./pages/Servers";
+import { Auth } from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          <Route path="/auth" element={<Auth />} />
           <Route path="/" element={<Index />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/mods" element={<Mods />} />
